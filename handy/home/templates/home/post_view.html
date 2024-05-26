@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock title %}
+
+{% block content %}
+    <div class="head">
+        <h1>{{ post.head }}</h1>
+        <p> {{ post.body }}</p>
+        <input type="text" placeholder='comment here'>
+        <button>submit</button>
+        <hr>
+        <p>contact @<a href="">user</a></p>
+    </div>
+
+{% endblock content %}

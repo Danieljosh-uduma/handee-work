@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock title %}
+
+{% block content %}
+    <h1>home</h1>
+    <div class="content">
+        {% for post in posts %}
+            <a href=""><small>@{{ post.section}}</small></a>
+            <a href="{% url 'post_view' post.head %}"><h3>{{ post.head }}</h3></a>
+            <p>{{ post.body }}</p>
+            <hr>
+        {% endfor %}
+        <small>main content</small>
+    </div>
+{% endblock content %}
