@@ -6,7 +6,11 @@
 
 {% block content %}
     <div class="head">
+        
         <h1>{{ post.head }}</h1>
+        <a href="{{request.META.HTTP_REFERER}}">GO BACK</a>
+        <a href="{% url 'update-post' post.id %}">edit post</a>|
+        <a href="{% url 'delete-post' post.id %}">Delete post</a>
         <p> {{ post.body }}</p>
         <input type="text" placeholder='comment here'>
         <button>submit</button>

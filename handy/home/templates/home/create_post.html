@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock title %}
+
+{% block content %}
+    <div class="head">
+        <h1>create post</h1>
+        <a href="{{request.META.HTTP_REFERER}}">GO BACK</a>
+        <form action="" method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value='Submit'>
+        </form>
+    </div>
+
+{% endblock content %}
